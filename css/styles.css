@@ -2,6 +2,9 @@
 
 body {
     background-color: #E3DFFF;
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
 }
 
 h1 {
@@ -9,6 +12,31 @@ h1 {
     font-weight: 500;
     font-style: normal;
     font-size: 4rem;
+    line-height: 0;
+}
+
+.overall-container {
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+}
+
+#rest-of-body {
+    margin-left: 1rem;
+}
+
+.pic-navbar-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#headshot {
+    width: 33rem;
+}
+
+#headshot-image {
+    width: 33rem;
+    height: 100%;
 }
 
 h2 {
@@ -53,6 +81,49 @@ p {
     font-size: 1.25rem;
 }
 
+h2 {
+    font-family: forma-djr-display, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+}
+
+h3 {
+    font-family: forma-djr-deck, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+}
+
+h4 {
+    font-family: forma-djr-deck, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.75rem;
+    line-height: 0rem;
+}
+
+h5 {
+    font-family: forma-djr-display, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1rem;
+}
+
+h6 {
+    font-family: forma-djr-display, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: .75rem;
+}
+
+p {
+    font-family: forma-djr-deck, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.25rem;
+}
+
 ol {
     font-family: forma-djr-deck, sans-serif;
     font-weight: 400;
@@ -71,10 +142,17 @@ li {
     font-family: forma-djr-deck, sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 1rem;
+    font-size: 1.25rem;
 }
 
-/* unvisited link */
+li a {
+    display: block;
+    color: #FFF;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #E3DFFF;
+}
+
 a:link {
     font-family: forma-djr-deck, sans-serif;
     font-weight: 400;
@@ -83,21 +161,13 @@ a:link {
     color: #c39eff;
 }
 
-/* visited link */
 a:visited {
     color: #937666;
 }
 
-
-/* mouse over link */
 a:hover {
     color: #937666;
     text-shadow: .5px .5px 3px #000000;
-}
-
-/* selected link */
-a:active {
-    color: blue;
 }
 
 hr {
@@ -116,7 +186,17 @@ hr {
     color: white;
     text-align: center;
     display: inline-block;
-    font-size: 16px;
+    font-size: 2rem;
+    margin: auto;
+    text-align: center;
+    width: 20rem;
+    height: 6rem;
+    border-radius: 1rem;
+}
+
+#button-container {
+    margin:auto;
+    text-align: center;
 }
 
 .button:hover {
@@ -126,4 +206,83 @@ hr {
 #colorpallate {
     width: 100%;
     border: 1px solid black;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: #E3DFFF;
+        margin: 0px;
+        padding: 0px;
+        height: 100%;
+    }
+
+    .overall-container {
+        display: flex;
+        direction: column;
+        flex-wrap: wrap;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #rest-of-body {
+        margin-left: 1rem;
+    }
+
+    #headshot {
+        width: 100%;
+    }
+
+    #headshot-item {
+        height: 6rem;
+        width: 100%;
+        background-image: url("../img/laser.jpeg");
+        background-size: 100%;
+        background-position: 0% 15%;
+    }
+
+    #headshot-image {
+        visibility: hidden;
+    }
+
+    h2 {
+        font-family: forma-djr-display, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 3rem;
+    }
+
+    h3 {
+        font-family: forma-djr-deck, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 2rem;
+    }
+
+    h4 {
+        font-family: forma-djr-deck, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.75rem;
+    }
+
+    h5 {
+        font-family: forma-djr-display, sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1rem;
+    }
+
+    h6 {
+        font-family: forma-djr-display, sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: .75rem;
+    }
+
+    p {
+        font-family: forma-djr-deck, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.25rem;
+    }
 }

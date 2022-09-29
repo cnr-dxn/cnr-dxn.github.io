@@ -1,0 +1,120 @@
+@import url("https://use.typekit.net/vxz1xud.css");
+
+body {
+    background-color: #E3DFFF;
+}
+
+h1 {
+    font-family: forma-djr-display, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 4rem;
+}
+
+h2 {
+    font-family: forma-djr-display, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+}
+
+h3 {
+    font-family: forma-djr-deck, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+}
+
+h4 {
+    font-family: forma-djr-deck, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.75rem;
+}
+
+h5 {
+    font-family: forma-djr-display, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1rem;
+}
+
+h6 {
+    font-family: forma-djr-display, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: .75rem;
+}
+
+p {
+    font-family: forma-djr-deck, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.25rem;
+}
+
+ol {
+    font-family: forma-djr-deck, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.25rem;
+}
+
+ul {
+    font-family: forma-djr-deck, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+}
+
+li {
+    font-family: forma-djr-deck, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+}
+
+a:link {
+    font-family: forma-djr-deck, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.25rem;
+    color: #c39eff;
+}
+
+a:visited {
+    color: #937666;
+}
+
+a:hover {
+    color: #937666;
+    text-shadow: .5px .5px 3px #000000;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    color: black; 
+    background-color: black; 
+}
+
+.button {
+    font-family: forma-djr-deck, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    background-color: #3D3A4B; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.button:hover {
+    box-shadow: 0px 0px 4px #000000;
+}
+
+#colorpallate {
+    width: 100%;
+    border: 1px solid black;
+}
