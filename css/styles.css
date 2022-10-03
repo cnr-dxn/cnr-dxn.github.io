@@ -1,211 +1,170 @@
 @import url("https://use.typekit.net/vxz1xud.css");
 
-body {
-    background-color: #E3DFFF;
-    margin: 0px;
-    padding: 0px;
-    height: 100%;
-}
+@media only screen and (min-width: 601px) {
+    body {
+        background-color: #E3DFFF;
+        margin: 0px;
+        padding: 0px;
+        height: 100%;
+    }
 
-h1 {
-    font-family: forma-djr-display, sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 4rem;
-    line-height: 0;
-}
+    .overall-container {
+        display: flex;
+        margin: 0px;
+        padding: 0px;
+    }
 
-.overall-container {
-    display: flex;
-    margin: 0px;
-    padding: 0px;
-}
+    #rest-of-body {
+        margin-left: 1rem;
+    }
 
-#rest-of-body {
-    margin-left: 1rem;
-}
+    .pic-navbar-container {
+        display: flex;
+        flex-direction: column;
+    }
 
-.pic-navbar-container {
-    display: flex;
-    flex-direction: column;
-}
+    #headshot {
+        width: 33rem;
+    }
 
-#headshot {
-    width: 33rem;
-}
+    #headshot-image {
+        width: 33rem;
+        height: 100%;
+    }
 
-#headshot-image {
-    width: 33rem;
-    height: 100%;
-}
+    h1 {
+        font-family: forma-djr-display, sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 4rem;
+        line-height: 0;
+    }
 
-h2 {
-    font-family: forma-djr-display, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 3rem;
-}
+    h2 {
+        font-family: forma-djr-display, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 3rem;
+    }
 
-h3 {
-    font-family: forma-djr-deck, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 2rem;
-}
+    h3 {
+        font-family: forma-djr-deck, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 2rem;
+    }
 
-h4 {
-    font-family: forma-djr-deck, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1.75rem;
-}
+    h4 {
+        font-family: forma-djr-deck, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.75rem;
+    }
 
-h5 {
-    font-family: forma-djr-display, sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 1rem;
-}
+    h5 {
+        font-family: forma-djr-display, sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1rem;
+    }
 
-h6 {
-    font-family: forma-djr-display, sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    font-size: .75rem;
-}
+    h6 {
+        font-family: forma-djr-display, sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: .75rem;
+    }
 
-p {
-    font-family: forma-djr-deck, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1.25rem;
-}
+    p {
+        font-family: forma-djr-deck, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.25rem;
+    }
 
-h2 {
-    font-family: forma-djr-display, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 3rem;
-}
+    ol {
+        font-family: forma-djr-deck, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.25rem;
+    }
 
-h3 {
-    font-family: forma-djr-deck, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 2rem;
-}
+    ul {
+        font-family: forma-djr-deck, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1rem;
+    }
 
-h4 {
-    font-family: forma-djr-deck, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1.75rem;
-    line-height: 0rem;
-}
+    li {
+        font-family: forma-djr-deck, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.25rem;
+    }
 
-h5 {
-    font-family: forma-djr-display, sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 1rem;
-}
+    li a {
+        display: block;
+        color: #FFF;
+        padding: 8px 16px;
+        text-decoration: none;
+        color: #E3DFFF;
+    }
 
-h6 {
-    font-family: forma-djr-display, sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    font-size: .75rem;
-}
+    a:link {
+        font-family: forma-djr-deck, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.25rem;
+        color: #c39eff;
+    }
 
-p {
-    font-family: forma-djr-deck, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1.25rem;
-}
+    a:visited {
+        color: #937666;
+    }
 
-ol {
-    font-family: forma-djr-deck, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1.25rem;
-}
+    a:hover {
+        color: #937666;
+        text-shadow: .5px .5px 3px #000000;
+    }
 
-ul {
-    font-family: forma-djr-deck, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1rem;
-}
+    hr {
+        border: none;
+        height: 1px;
+        color: black; 
+        background-color: black; 
+    }
 
-li {
-    font-family: forma-djr-deck, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1.25rem;
-}
+    .button {
+        font-family: forma-djr-deck, sans-serif;
+        font-weight: 100;
+        font-style: normal;
+        background-color: #3D3A4B; /* Green */
+        border: none;
+        color: white;
+        text-align: center;
+        display: inline-block;
+        font-size: 2rem;
+        margin: auto;
+        text-align: center;
+        width: 20rem;
+        height: 6rem;
+        border-radius: 1rem;
+    }
 
-li a {
-    display: block;
-    color: #FFF;
-    padding: 8px 16px;
-    text-decoration: none;
-    color: #E3DFFF;
-}
+    #button-container {
+        margin:auto;
+        text-align: center;
+    }
 
-a:link {
-    font-family: forma-djr-deck, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1.25rem;
-    color: #c39eff;
-}
+    .button:hover {
+        box-shadow: 0px 0px 4px #000000;
+    }
 
-a:visited {
-    color: #937666;
-}
-
-a:hover {
-    color: #937666;
-    text-shadow: .5px .5px 3px #000000;
-}
-
-hr {
-    border: none;
-    height: 1px;
-    color: black; 
-    background-color: black; 
-}
-
-.button {
-    font-family: forma-djr-deck, sans-serif;
-    font-weight: 100;
-    font-style: normal;
-    background-color: #3D3A4B; /* Green */
-    border: none;
-    color: white;
-    text-align: center;
-    display: inline-block;
-    font-size: 2rem;
-    margin: auto;
-    text-align: center;
-    width: 20rem;
-    height: 6rem;
-    border-radius: 1rem;
-}
-
-#button-container {
-    margin:auto;
-    text-align: center;
-}
-
-.button:hover {
-    box-shadow: 0px 0px 4px #000000;
-}
-
-#colorpallate {
-    width: 100%;
-    border: 1px solid black;
+    #colorpallate {
+        width: 100%;
+        border: 1px solid black;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -242,6 +201,14 @@ hr {
 
     #headshot-image {
         visibility: hidden;
+    }
+
+    h1 {
+        font-family: forma-djr-display, sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 4rem;
+        line-height: 0;
     }
 
     h2 {
