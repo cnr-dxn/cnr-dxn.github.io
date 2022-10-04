@@ -27,15 +27,18 @@ body {
 
 .title-container {
     justify-content: center;
-    /* border: 3px solid white; */
     text-align: center;
     margin-top: 9rem;
+    padding-bottom: 0;
+    margin-bottom: 0rem;
 }
 
 .main-title {
     margin:auto;
     padding-top: 4rem;
     padding-bottom: 4rem;
+    text-shadow: 3px 3px 10px #000000;
+    overflow-wrap: break-word;
 }
 
 .main-description {
@@ -45,15 +48,93 @@ body {
 
 .aspects-title-section {
     text-align: center;
-}
-.aspects-title {
-    color: white;
-    font-size: 6rem;
-    border: 3px solid white;
     margin-top: 1rem;
 }
 
+.aspects-title {
+    color: white;
+    font-size: 5rem;
+    /* border: 3px solid white; */
+    margin-bottom: 4rem;
+}
 
+.aspects-title-subsection {
+    color: white;
+    font-size: 3rem;
+    /* border: 3px solid white; */
+    padding-bottom: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.aspects-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 3rem;
+    /* border: 3px solid blue; */
+}
+
+.aspects-image {
+    /* border: 3px solid white; */
+    width: 25rem;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-width: 100%; 
+    height: auto;
+}
+
+.aspects-title-container {
+    text-align: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+}
+
+.image-container {
+    /* border: 3px solid red; */
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.aspects-education {
+    margin-right: 2rem;
+    /* border: 3px solid white; */
+    width: 25rem;
+}
+
+.aspects-experience {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    /* border: 3px solid white; */
+    width: 25rem;
+}
+
+.aspects-expertise {
+    margin-left: 2rem;
+    /* border: 3px solid white; */
+    width: 25rem;
+}
+
+.aspects-paragraph {
+    color: white;
+    /* border: 3px solid yellow; */
+    padding: 0;
+    line-height: 26pt;
+}
+
+.aspects-paragraph-text {
+    text-align: center;
+}
+
+.image-container {
+    margin-bottom: 0;
+}
 
 h1 {
     font-family: forma-djr-display, sans-serif;
@@ -226,10 +307,73 @@ hr {
     border: 1px solid black;
 }
 
+.footer-container {
+    background-color: black;
+    text-align: center;
+    color: white;
+}
+
+.footer-title {
+    color: #B19994;
+    margin-bottom: 0;
+}
+
+.footer-email {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.footer-phone {
+    margin-top: .2rem;
+}
+
+
+
+
 @media only screen and (min-width: 601px) {
     /* stuff */
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
     /* stuff */
+    .title-container {
+        justify-content: center;
+        text-align: center;
+        margin-top: 9rem;
+        padding-bottom: 0;
+        margin-bottom: 0rem;
+        overflow-wrap: break-word;
+        word-break:break-all;
+    }
+
+    .main-title {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        font-size: 15vw;
+        text-shadow: 3px 3px 10px #000000;
+        overflow-wrap: break-word;
+        word-break:break-all;
+    }
+
+    .aspects-items {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 3rem;
+        margin:auto;
+    }
+
+    .aspects-education {
+        /* margin-left: 4rem; */
+        margin: auto;
+    }
+
+    .aspects-experience {
+        margin: auto;
+    }
+
+    .aspects-expertise {
+        margin: auto;
+    }
+
 }
