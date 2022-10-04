@@ -33,17 +33,68 @@ body {
     margin-bottom: 0rem;
 }
 
+.taskbuff-title-container {
+    justify-content: center;
+    text-align: center;
+    margin-top: 0rem;
+    margin-bottom: 8rem;
+}
+
+.taskbuff-image-title {
+    width: 50%;
+}
+
+.taskbuff-main-description {
+    margin:auto;
+}
+
+.taskbuff-paragraph-text {
+    text-align: center;
+    /* border: 2px solid white; */
+    width: 75%;
+    margin: auto;
+    color: white;
+    font-size: 2rem;
+}
+
+.button-github {
+    font-family: forma-djr-deck, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    color: white;
+    background-color: transparent;
+    text-align: center;
+    display: inline-block;
+    font-size: 1.5rem;
+    margin: auto;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+    width: 14rem;
+    height: 6rem;
+    border-radius: 0.3rem;
+    border: 2px solid white;
+}
+
+.button-github:hover {
+    color: black;
+    background-color: white;
+}
+
+.midbreak {
+    width: 75%;
+    color: white;
+    margin-top: 4rem;
+    border-color: white;
+    border-top: 1px solid white;
+}
+
 .main-title {
     margin:auto;
     padding-top: 4rem;
     padding-bottom: 4rem;
     text-shadow: 3px 3px 10px #000000;
     overflow-wrap: break-word;
-}
-
-.main-description {
-    margin:auto;
-    /* border: 3px solid white; */
 }
 
 .aspects-title-section {
@@ -67,12 +118,30 @@ body {
     margin-top: 0;
 }
 
+.projects-title-subsection {
+    color: black;
+    font-size: 3rem;
+    /* border: 3px solid white; */
+    padding-bottom: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
 .aspects-items {
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin-top: 3rem;
     /* border: 3px solid blue; */
+}
+
+.projects-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 3rem;
+    /* border: 3px solid blue; */
+    margin-bottom: 3rem;
 }
 
 .aspects-image {
@@ -108,6 +177,52 @@ body {
     width: 25rem;
 }
 
+.project-taskbuff {
+    margin-right: 2rem;
+    border: 3px solid white;
+    width: 25rem;
+    margin-top: 0;
+    padding-top: 0;
+    background-color: white;
+    box-shadow: 3px 3px 4px #000000;
+}
+
+.project-taskbuff-interior {
+    margin-top: auto;
+    padding-top: 1rem;
+    margin-bottom: auto;
+    /* border: 3px solid orange; */
+}
+
+.project-ml {
+    margin-right: 2rem;
+    margin-left: 2rem;
+    /* border: 3px solid white; */
+    width: 25rem;
+    margin-top: 0;
+    padding-top: 0;
+    background-color: white;
+    box-shadow: 3px 3px 4px #000000;
+}
+
+.project-pta {
+    margin-left: 2rem;
+    /* border: 3px solid green; */
+    width: 25rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    height: 100%;
+    display: block;
+    background-color: white;
+    box-shadow: 3px 3px 4px #000000;
+}
+
+.project-ml-interior {
+    padding-top: 1rem;
+    padding-bottom: auto;
+    /* border: 3px solid pink; */
+}
+
 .aspects-experience {
     margin-left: 1rem;
     margin-right: 1rem;
@@ -121,6 +236,12 @@ body {
     width: 25rem;
 }
 
+.taskbuff-image {
+    width: 100%;
+    justify-content: center;
+    /* border: 3px solid white; */
+}
+
 .aspects-paragraph {
     color: white;
     /* border: 3px solid yellow; */
@@ -130,6 +251,14 @@ body {
 
 .aspects-paragraph-text {
     text-align: center;
+}
+
+.projects-paragraph-text {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: black
 }
 
 .image-container {
@@ -280,17 +409,19 @@ hr {
     font-family: forma-djr-deck, sans-serif;
     font-weight: 100;
     font-style: normal;
-    background-color: #3D3A4B; /* Green */
-    border: none;
-    color: white;
+    background-color: #FFFFFF; /* Green */
+    color: black;
     text-align: center;
     display: inline-block;
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin: auto;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
     text-align: center;
-    width: 20rem;
+    width: 12rem;
     height: 6rem;
-    border-radius: 1rem;
+    border-radius: 0.3rem;
+    border: 2px solid black;
 }
 
 #button-container {
