@@ -91,11 +91,41 @@ body {
 
 .main-title {
     margin:auto;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 2rem;
     text-shadow: 3px 3px 10px #000000;
-    overflow-wrap: break-word;
+    /* border: 3px solid white; */
+    width: 75%;
+    word-wrap:break-word;
+    line-height: 8rem;
+    font-size: 8rem;
 }
+
+.main-title-ml {
+    margin:auto;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    text-shadow: 3px 3px 10px #000000;
+    /* border: 3px solid white; */
+    width: 75%;
+    word-wrap:break-word;
+    line-height: 6rem;
+    font-size: 6rem;
+}
+
+.main-title-pta {
+    margin:auto;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    text-shadow: 3px 3px 10px #000000;
+    /* border: 3px solid white; */
+    width: 75%;
+    word-wrap:break-word;
+    line-height: 8rem;
+    font-size: 8rem;
+}
+
 
 .aspects-title-section {
     text-align: center;
@@ -178,9 +208,11 @@ body {
 }
 
 .project-taskbuff {
-    margin-right: 2rem;
+    margin-right: 1rem;
     border: 3px solid white;
     width: 25rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     margin-top: 0;
     padding-top: 0;
     background-color: white;
@@ -195,18 +227,20 @@ body {
 }
 
 .project-ml {
-    margin-right: 2rem;
-    margin-left: 2rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
     /* border: 3px solid white; */
     width: 25rem;
     margin-top: 0;
     padding-top: 0;
     background-color: white;
     box-shadow: 3px 3px 4px #000000;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .project-pta {
-    margin-left: 2rem;
+    margin-left: 1rem;
     /* border: 3px solid green; */
     width: 25rem;
     padding-top: 4rem;
@@ -215,6 +249,8 @@ body {
     display: block;
     background-color: white;
     box-shadow: 3px 3px 4px #000000;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .project-ml-interior {
