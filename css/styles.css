@@ -25,12 +25,56 @@ body {
     /* border: 3px solid grey;  */
 }
 
+.top-container-contact {
+    height: 40rem;
+    background-size: cover; 
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    /* border: 3px solid grey;  */
+}
+
 .title-container {
     justify-content: center;
     text-align: center;
     margin-top: 9rem;
     padding-bottom: 0;
     margin-bottom: 0rem;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.contact-picture {
+    width: 20rem;
+    margin-left: 20rem;
+    margin-right: 2rem;
+    padding-right: 0;
+    height: 100%;
+}
+
+.contact-picture-container {
+    /* border: 3px solid grey;  */
+    padding-right: 0;
+}
+
+.contact-card-container {
+    margin-top: 3rem;
+    float: left;
+    margin-right: 8rem;
+    /* border: 3px solid blue;  */
+    text-align: left;
+}
+
+.contact-card-title {
+    float: left;
+    margin-right: 10rem;
 }
 
 .taskbuff-title-container {
@@ -582,6 +626,32 @@ hr {
 
     .project-pta {
         margin: auto;
+    }
+
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* height: 40rem; */
+        /* border: 2px solid white; */
+    }
+
+    .contact-picture { 
+        margin: auto;
+        visibility: hidden;
+        height: 0;
+    }
+
+    .contact-card-container {
+        margin: auto;
+        text-align: center;
+    }
+
+    .contact-card-title {
+        float: center;
+        margin-left: auto;
+        margin-right: auto;
+        /* margin-right: 10rem; */
     }
 
 }
