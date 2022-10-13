@@ -12,8 +12,7 @@ function randomValueFromArray(array){
 let storyText = `It was a Thursday, and :insertx: was in his Web recitation class. 
                  :insertx: was eager to leave, as he had plans to visit the :insertY:
                  after they left, and it felt like he had worked on this assignment for
-                 at least 94 hours at that point. He rushed through the assignment very 
-                 quickly, and 
+                 at least 94 hours at that point. Nevertheless, he chugged through the assignment and
                  was confident that he had finished it. When he was about to turn 
                  it in, however, he noticed that they had forgot to change the 
                  story at ALL which was like HALF of the assignment. He promply felt like
@@ -41,8 +40,7 @@ function result() {
     storyText = `It was a Thursday, and ${xItem} was in his Web recitation class. 
                 ${xItem} was eager to leave, as he had plans to visit the ${yItem}
                 after they left, and it felt like he had worked on this assignment for
-                at least 94 hours at that point. He rushed through the assignment very 
-                quickly, and 
+                at least 94 hours at that point. Nevertheless, he chugged through the assignment, and finally
                 was confident that he had finished it. When he was about to turn 
                 it in, however, he noticed that they had forgot to change the 
                 story at ALL which was like HALF of the assignment. He promply felt like
@@ -67,8 +65,7 @@ function result() {
     storyText = `It was a Thursday, and ${xItem} was in his Web recitation class. 
                 ${xItem} was eager to leave, as he had plans to visit the ${yItem}
                 after they left, and it felt like he had worked on this assignment for
-                at least 94 hours at that point. He rushed through the assignment very 
-                quickly, and 
+                at least 94 hours at that point. Nevertheless, he chugged through the assignment, and finally
                 was confident that he had finished it. When he was about to turn 
                 it in, however, he noticed that they had forgot to change the 
                 story at ALL which was like HALF of the assignment. He promply felt like
@@ -86,8 +83,7 @@ function result() {
         storyText = `It was a Thursday, and ${xItem} was in his Web recitation class. 
                     ${xItem} was eager to leave, as he had plans to visit the ${yItem}
                     after they left, and it felt like he had worked on this assignment for
-                    at least ${weight} hours at that point. He rushed through the assignment very 
-                    quickly, and 
+                    at least ${weight} hours at that point. Nevertheless, he chugged through the assignment, and finally
                     was confident that he had finished it. When he was about to turn 
                     it in, however, he noticed that they had forgot to change the 
                     story at ALL which was like HALF of the assignment. He promply felt like
