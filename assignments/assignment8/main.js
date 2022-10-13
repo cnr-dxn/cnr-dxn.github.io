@@ -94,6 +94,7 @@ function result() {
                     save his life.`
     }
 
+
     story.textContent = storyText;
     story.style.visibility = 'visible';
     console.log(storyText)
