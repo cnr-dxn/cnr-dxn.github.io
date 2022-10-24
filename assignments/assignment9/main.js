@@ -5,10 +5,10 @@ const btn = document.querySelector('button');
 const overlay = document.querySelector('.overlay');
 
 /* Declaring the array of image filenames */
-const images = ['./images/ls1.jpg', './images/ls3.jpg', './images/ls4.jpg', './images/ls5.jpg']
+const images = ['./images/ls1.jpg', './images/ls2.jpg', './images/ls3.jpg', './images/ls4.jpg', './images/ls5.jpg']
 
 /* Declaring the alternative text for each image file */
-const images_alt = ['IllustratedRiver.jpeg', 'Fjord.jpeg', 'Simple.jpeg', 'Snow.jpeg']
+const images_alt = ['IllustratedRiver.jpeg', 'Wallpaper.jpg', 'Fjord.jpg', 'Simple.jpg', 'Snow.jpg']
 
 /* Looping through images */
 for (let i = 0; i < images.length; i++) { 
