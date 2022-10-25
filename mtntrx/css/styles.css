@@ -1,7 +1,7 @@
 @import url("https://use.typekit.net/vxz1xud.css");
 
 body {
-    background-color: #3D3A4B;
+    background-color: #1E2F23;
     margin: 0px;
     padding: 0px;
     height: 100%;
@@ -13,7 +13,7 @@ body {
 }
 
 .top-container {
-    background-image: url('../img/hdr3.jpg');
+    background-image: url('../img/bgrnd.jpg');
     height: 40rem;
     background-size: cover; 
     background-position: center center;
@@ -122,6 +122,14 @@ body {
     font-size: 8rem;
 }
 
+.main-title-img {
+    margin:auto;
+    margin-top: -5rem;
+    padding-top: 0;
+    padding-bottom: 2rem;
+    width: 50%;
+}
+
 .main-title-ml {
     margin:auto;
     margin-top: 4rem;
@@ -146,6 +154,27 @@ body {
     font-size: 8rem;
 }
 
+.aspects-container {
+    display: flex;
+}
+
+.aspects-left-container {
+    line-height: 1.5rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    /* border: 2px white solid; */
+}
+
+.aspects-right-container {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    height: 100%;
+}
+
+#techpeople {
+    height: 100%;
+    margin-bottom: 0;
+}
 
 .aspects-title-section {
     text-align: center;
@@ -154,9 +183,42 @@ body {
 
 .aspects-title {
     color: white;
-    font-size: 5rem;
+    font-size: 4rem;
     /* border: 3px solid white; */
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
+
+    font-family: clarendon-text-pro,serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.aspects-description-section {
+    text-align: center;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+.aspects-description-first {
+    color: white;
+    font-size: 2rem;
+    /* border: 3px solid white; */
+    margin-bottom: 2rem;
+
+    font-family: forma-djr-deck, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.4rem;
+}
+
+.aspects-description-second {
+    color: white;
+    font-size: 2rem;
+    /* border: 3px solid white; */
+
+    font-family: forma-djr-deck, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.3rem;
 }
 
 .aspects-title-subsection {
@@ -419,9 +481,9 @@ ul {
 }
 
 #logo {
-    width: 4rem;
-    padding-top: 0.1rem;
-    margin-left: 0.8rem;
+    width: 5rem;
+    margin-top: -1.9rem;
+    margin-left: 0.6rem;
 }
 
 
@@ -503,8 +565,9 @@ hr {
 }
 
 .footer-title {
-    color: #B19994;
-    margin-bottom: 0;
+    color: #d0ffc6;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 
 .footer-email {
@@ -605,10 +668,10 @@ hr {
 
     .contact-picture {
         width: 20rem;
+        margin-top: 5rem;
         margin-left: 20rem;
         margin-right: 2rem;
         padding-right: 0;
-        height: 100%;
     }
 
     .contact-card-container {
