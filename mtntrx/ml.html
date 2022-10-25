@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Machine Learning Project</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="https://use.typekit.net/vxz1xud.css">
+    </head>
+    <body>
+        <div class="overall-container">
+            <div class="top-container">
+                <div class='navbar-container'>
+                    <ul class='navbar-list'>
+                        <li class='navbar-items'><a class='navbar-item' href="contact.html">Contact</a></li>
+                        <li class='navbar-items'><a class='navbar-item' href="projects.html">Projects</a></li>
+                        <li class='navbar-items'><a class='navbar-item' href="index.html">Home</a></li>
+                        <li style="float:left" class='navbar-items' ><a href='index.html'><img alt='pagelogo' id='logo' class='navbar-item' src='img/logo.png'></a></li>
+                    </ul>
+                </div>
+                <div class='taskbuff-title-container' id='ml'>
+                    <h1 class='main-title-ml'>Machine Learning Oriented <br> Box Office Success Study</h1>
+                    <h3 class='taskbuff-main-description' id='ml-description'> A Study on the Major Determining Factors for Box Office Success in the Film Industry</h3>
+                    <button onclick="window.location.href='https://github.com/cnr-dxn/machine-learning-box-office-success-study';" class='button-github' >GitHub Repository</button>
+                </div>
+            </div>
+            <div class="aspects-container">
+                <div class='aspects-title-section'>
+                    <h2 class='aspects-title'>Description</h2>
+                </div>
+                <p class='taskbuff-paragraph-text'>
+                    This project analyzed and normalized past box office data utilizing The Movie Database (TMDB API), evaluated trends and 
+                    patterns within said data, used said data to create models to predict the performance of upcoming films (utilizing machine 
+                    learning libr, and ultimately determined what attributes dictate success for an upcoming film. 
+                </p>
+                <hr class='midbreak'>
+                <div class='aspects-title-section'>
+                    <h2 class='aspects-title'>Components</h2>
+                </div>
+                <div class='aspects-items'>
+                    <div class='aspects-education'>
+                        <div class='aspects-title-container'>
+                            <h3 class='aspects-title-subsection'>Data Collection</h3>
+                        </div>
+                        <div class='aspects-paragraph'>
+                            <p class='aspects-paragraph-text'>
+                                Users can create tasks with components such as due date, duration, start time, end time, and location, all 
+                                of which are stored in the database in their respective data fields, making it easy and efficient for tasks 
+                                to be created and shared within the app.
+                            </p>
+                        </div>
+                    </div>
+                    <div class='aspects-experience'>
+                        <div class='aspects-title-container'>
+                            <h3 class='aspects-title-subsection'>Data Analysis & Preparation</h3>
+                        </div>
+                        <div class='aspects-paragraph'>
+                            <p class='aspects-paragraph-text'>
+                                To prepare the data for model processing and usage, One-Hot Encoding of variables was utilized. Binning was also 
+                                used, specifically 104 bins to account for years between 1918-2020
+                            </p>
+                        </div>
+                    </div>
+                    <div class='aspects-expertise'>
+                        <div class='aspects-title-container'>
+                            <h3 class='aspects-title-subsection'>Machine Learning Model Utilization</h3>
+                        </div>
+                        <div class='aspects-paragraph'>
+                            <p class='aspects-paragraph-text'>
+                                To achieve the highest possible prediction rate, an ensemble learning method was used, using both bagging 
+                                (with a Random Forest Regressor from sklearn) and boosting (with an Extreme Gradient Boosted Regressor from XGBoost), 
+                                both utilizing a 90/10 train-test split. Scored a highest R^2 score of 0.69.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class='footer-container'>
+                <h2 class='footer-title'>Connor Dixon</h2>
+                <p class='footer-email'>connorddixon@gmail.com</p>
+                <p class='footer-phone'>(970) 219-5822</p>
+                <p class='footer-disclaimer'>All non-header, non-logo and CU Boulder©  images are solely created by Connor Dixon</p>
+            </div>
+        </div>
+    </body>
+</html>
