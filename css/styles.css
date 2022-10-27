@@ -555,6 +555,15 @@ hr {
     margin-left: 6rem;
 }
 
+.assignment_10_landing_title {
+    color: white;
+    line-height: 10rem;
+    text-align: center;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    margin-top: 13rem;
+}
+
 
 @media only screen and (min-width: 601px) {
     /* stuff */
