@@ -5,6 +5,7 @@ const sam = {
     'salary': 40000.00,
     'raise_elligible': true
 }
+
 const mary = {
     'first_name': 'Mary',
     'department': 'Finance',
@@ -12,6 +13,7 @@ const mary = {
     'salary': 18500.00,
     'raise_elligible': true
 }
+
 const bill = {
     'first_name': 'Bill',
     'department': 'HR',
@@ -19,8 +21,10 @@ const bill = {
     'salary': 21200.00,
     'raise_elligible': false
 }
+
 console.log("Problem 1: ", sam, mary, bill)
 
+// -----------------------------------------------------------
 
 const employees = [sam, mary, bill];
 const company = {
@@ -28,13 +32,18 @@ const company = {
         'website': 'www.techstars.site',
         'employees': employees
 }
+
 console.log("Problem 2: ", company)
 
+// -----------------------------------------------------------
+
 const employees_anna = [];
+
 for (let i = 0; i < employees.length; i++){
     let curr_employee = Object.assign({}, employees[i]);
     employees_anna.push(curr_employee);
 }
+
 const anna = {
     'first_name': 'Anna',
     'department': 'Tech',
@@ -42,26 +51,47 @@ const anna = {
     'salary': 26500.00,
     'raise_elligible': false
 }
+
 employees_anna.push(anna)
-console.log("Problem 3: ", employees_anna)
+company.employees = employees_anna;
+console.log("Problem 3: ", company)
+
+
+
+// -----------------------------------------------------------
+
+let total_salary = 0;
+for (i = 0; i < employees_anna.length; i++) {
+    total_salary += employees_anna[i]['salary'];
+}
+console.log("Problem 4: ", total_salary)
+
+// -----------------------------------------------------------
 
 const employees_raised = [];
+
 for (let i = 0; i < employees_anna.length; i++){
     let curr_employee = Object.assign({}, employees_anna[i]);
     employees_raised.push(curr_employee);
 }
+
 for (let i = 0; i < employees_raised.length; i++) {
     if (employees_raised[i]['raise_elligible']) {
         employees_raised[i]['salary'] = (employees_raised[i]['salary']) * 1.1
     }
 }
-console.log("Problem 4: ", employees_raised)
+
+console.log("Problem 5: ", employees_raised)
+
+// -----------------------------------------------------------
 
 const employees_raised_wfh = [];
+
 for (let i = 0; i < employees_raised.length; i++){
     let curr_employee = Object.assign({}, employees_raised[i]);
     employees_raised_wfh.push(curr_employee);
 }
+
 for (let i = 0; i < employees_raised_wfh.length; i++) {
     if ((employees_raised_wfh[i]['first_name'] == 'Anna') || (employees_raised_wfh[i]['first_name'] == 'Sam')) {
         employees_raised_wfh[i]['wfh'] = true;
@@ -69,4 +99,5 @@ for (let i = 0; i < employees_raised_wfh.length; i++) {
         employees_raised_wfh[i]['wfh'] = false;
     }
 }
-console.log("Problem 5: ", employees_raised_wfh)
+
+console.log("Problem 6: ", employees_raised_wfh)
