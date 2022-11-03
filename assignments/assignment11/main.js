@@ -3,7 +3,7 @@ btn.addEventListener('click', function(){
     getMovie();
 });
 
-let base_url = "http://www.omdbapi.com/?apikey=56b1a3d7&t="
+let base_url = "https://www.omdbapi.com/?apikey=56b1a3d7&t="
 let movies= [
     "Creed&y=2-15",
     "Tenet",
