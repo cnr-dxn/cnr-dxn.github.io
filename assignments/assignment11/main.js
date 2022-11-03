@@ -25,7 +25,7 @@ function getMovie() {
     console.log("the generate button has been clicked");
     let random_movie = movies[Math.floor(Math.random()*movies.length)];
     let api = base_url + random_movie;
-    console.log(api)
+    console.log("api:", api)
 
     fetch(api)
         .then(response => response.text())
