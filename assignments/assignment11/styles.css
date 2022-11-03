@@ -58,10 +58,15 @@ html {
   }
 
   .movie-poster {
-    width: 200px;
+    /* width: 200px; */
     text-align: center;
-    margin-left: 6.2rem;
+    /* margin-left: 6.2rem; */
+    margin: auto;
   } 
+
+  .movie-poster-image {
+    width: 250px;
+  }
   
   .movie-title {
     margin-top: 1rem;

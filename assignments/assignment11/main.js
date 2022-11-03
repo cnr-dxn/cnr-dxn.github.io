@@ -50,7 +50,7 @@ function displayMovie(title, year, director, poster) {
     let movie_year = document.getElementById('js-movie-year');
     let movie_director = document.getElementById('js-movie-director');
     // movie_poster.innerHTML = ```<img src=${poster}>```;
-    let poster_src = `<img src="${poster}" alt="${title} Poster">`;
+    let poster_src = `<img class="movie-poster-image" src="${poster}" alt="${title} Poster">`;
     movie_poster.innerHTML = poster_src;
     movie_title.innerHTML = title;
     movie_year.innerHTML = "Year: " + year;
