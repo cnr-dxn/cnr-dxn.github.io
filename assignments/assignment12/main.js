@@ -7,7 +7,6 @@ const exponent_button = document.querySelector('#exponent-button').addEventListe
 const submit_button = document.querySelector('#assign-12-submit').addEventListener('click', submit);
 const phone_number = document.querySelector('.assign-12-phone-number');
 
-
 function checkNum(num, prev_num, if_minus) {
 
     if (num < 0) {
