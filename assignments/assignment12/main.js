@@ -60,7 +60,7 @@ function multiply() {
 function divide() {
     console.log("divide");
     const new_phone_number = parseInt(parseInt(phone_number.innerHTML) / 3);
-    if (checkNum(new_phone_number, parseInt(phone_number.innerHTML), false) == true) {
+    if (checkNum(new_phone_number, parseInt(phone_number.innerHTML), true) == true) {
         phone_number.innerHTML = new_phone_number;
     }
     else {
