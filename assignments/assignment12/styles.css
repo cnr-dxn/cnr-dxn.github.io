@@ -555,82 +555,8 @@ hr {
     margin-left: 6rem;
 }
 
-.assignment_10_landing_title {
-    color: white;
-    line-height: 10rem;
-    text-align: center;
-    margin-left: 4rem;
-    margin-right: 4rem;
-    margin-top: 13rem;
-}
 
-.assign-12-container {
-    background-color: white;
-    margin-left: 2rem;
-    margin-right: 2rem;
-    margin-top: 10rem;
-    text-align: center;
-}
 
-.assign-12-title {
-    font-size: 3rem;
-    margin-top: 1rem;
-    margin-bottom: 0rem;
-}
-
-.assign-12-text {
-    margin-top: 1rem;
-    padding-top: 1rem;
-    margin-bottom: 0rem;
-    font-size: 3rem;
-
-}
-
-.assign-12-phone-number {
-    margin-top: 2rem;
-    margin-bottom: 0rem;
-    font-size: 2rem;
-    font-family: Arial, sans-serif;
-}
-
-.assign-12-buttons {
-    margin: auto;
-}
-
-.assign-12-button {
-    font-family: forma-djr-deck, sans-serif;
-    font-weight: 100;
-    font-style: normal;
-    background-color: #FFFFFF; /* Green */
-    color: black;
-    text-align: center;
-    display: inline-block;
-    font-size: 1.5rem;
-    margin: auto;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-    text-align: center;
-    width: 8rem;
-    height: 6rem;
-    border-radius: 0.3rem;
-    border: 2px solid black;
-    transition: 0.3s;
-}
-
-.assign-12-button:hover {
-    background-color: #3D3A4B;
-    color: white;
-}
-
-#assign-12-submit {
-    margin-top: 0rem;
-    width: 50rem;
-}
-
-#assign-12-submit:hover {
-    background-color: #04491e;
-    color: white;
-}
 
 @media only screen and (min-width: 601px) {
     /* stuff */
