@@ -9,6 +9,10 @@ const phone_number = document.querySelector('.assign-12-phone-number');
 
 function checkNum(num, prev_num, if_minus) {
 
+    if (num == 0 ) {
+        return true;
+    }
+
     if (num < 0) {
         alert("the number you created is negative. resetting to 0.")
         return false;
