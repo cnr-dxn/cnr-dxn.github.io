@@ -9,13 +9,13 @@ let boardExposed;
 function add_rows(){
     let tableElement = document.getElementById('table-div');
 
-    for ( let i=0; i<GAME_ROWS; i++ ) {
+    for (let i=0; i<GAME_ROWS; i++) {
         const newRowDiv = document.createElement("div");
         newRowDiv.setAttribute('id', `row${i}-div`);
         newRowDiv.setAttribute('class', "mRow");
         tableElement.appendChild( newRowDiv );
 
-        for ( let j=0; j < GAME_COLS; j++ ) {
+        for (let j=0; j < GAME_COLS; j++) {
             const newCellDiv = document.createElement("div");
             newCellDiv.setAttribute('id', `cell_r${i}c${j}`);
             newCellDiv.setAttribute('class', "mCell");
@@ -30,11 +30,11 @@ function add_rows(){
 function place_bombs(){
     let placedBombs = 0;
 
-    while( placedBombs <= NUM_BOMBS ) {
+    while (placedBombs <= NUM_BOMBS) {
         let bombCellRow = Math.floor(Math.random() * GAME_ROWS);
         let bombCellCol = Math.floor(Math.random() * GAME_COLS);
 
-        if( boardContents[bombCellRow][bombCellCol] == 'EMPTY' ) {
+        if (boardContents[bombCellRow][bombCellCol] == 'EMPTY') {
             boardContents[bombCellRow][bombCellCol] = 'B';
             placedBombs++;
         }
@@ -42,10 +42,10 @@ function place_bombs(){
 }
 
 function add_numbers(){
-    for ( let i=0; i<GAME_ROWS; i++ ) {
-        for ( let j=0; j < GAME_COLS; j++ ) {
+    for (let i=0; i<GAME_ROWS; i++) {
+        for (let j=0; j < GAME_COLS; j++) {
 
-            if ( boardContents[i][j] === 'B' ) { 
+            if (boardContents[i][j] === 'B') { 
                 continue;
             }
 
@@ -56,9 +56,11 @@ function add_numbers(){
             let searchColStart = Math.max( 0, j-1 );
             let searchColEnd = Math.min( j+1, GAME_COLS - 1 );
 
-            for ( let r=searchRowStart; r <= searchRowEnd; r++ ){
-                for ( let c=searchColStart; c <= searchColEnd; c++ ){
-                    if ( boardContents[r][c] === 'B' ) { neighborBombs++; } 
+            for (let r=searchRowStart; r <= searchRowEnd; r++) {
+                for (let c=searchColStart; c <= searchColEnd; c++) {
+                    if (boardContents[r][c] === 'B') { 
+                        neighborBombs++; 
+                    } 
                 }
             }
 
@@ -70,10 +72,10 @@ function add_numbers(){
 function init_board_state(){
     boardContents = new Array(GAME_ROWS);
     boardExposed = new Array(GAME_ROWS);
-    for ( let i=0; i<GAME_ROWS; i++ ) {
+    for (let i=0; i<GAME_ROWS; i++) {
         boardContents[i] = new Array(GAME_COLS);
         boardExposed[i] = new Array(GAME_COLS);
-        for ( let j=0; j < GAME_COLS; j++ ) {
+        for (let j=0; j < GAME_COLS; j++) {
             boardContents[i][j] = 'EMPTY';
             boardExposed[i][j] = false;
         }
@@ -114,11 +116,11 @@ function corresponding_color(num) {
 }
 
 function update_board(){
-    for ( let i=0; i<GAME_ROWS; i++ ) {
-        for ( let j=0; j < GAME_COLS; j++ ) {
+    for (let i=0; i<GAME_ROWS; i++) {
+        for (let j=0; j < GAME_COLS; j++) {
             let cellId = document.getElementById( `cell_r${i}c${j}` );
             // TODO error check on cellId
-            if ( boardExposed[i][j] ) {
+            if (boardExposed[i][j]) {
                 if (boardContents[i][j] == 0) {
                     cellId.textContent = " ";
                 }
@@ -135,7 +137,7 @@ function update_board(){
 
 function cell_clicked( row, col ) {
     console.log( `Cell clicked: r:${row} c:${col}\n` );
-    if ( GAME_STATE == 'ACTIVE' ) {
+    if (GAME_STATE == 'ACTIVE') {
         boardExposed[row][col] = true;
         let state = check_game_state();
         if (state == true) {
