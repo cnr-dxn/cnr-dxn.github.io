@@ -1,17 +1,14 @@
 let GAME_ROWS=10;
 let GAME_COLS=10;
 let NUM_BOMBS=20;
-let GAME_STATE='SETUP'; // SETUP, ACTIVE, WIN, LOST
+let GAME_STATE='SETUP'; 
 
-let boardContents; // boardContents[row][col] = 'B', '<NUMBER>', 'EMPTY'
-let boardExposed;  // boolean
+let boardContents; 
+let boardExposed;  
 
-function addRows(){
+function add_rows(){
     let tableElement = document.getElementById('table-div');
 
-    // add all the rows and cells to the table
-    // set a uniqe id for each
-    // set a class for each
     for ( let i=0; i<GAME_ROWS; i++ ) {
         const newRowDiv = document.createElement("div");
         newRowDiv.setAttribute('id', `row${i}-div`);
@@ -22,6 +19,7 @@ function addRows(){
             const newCellDiv = document.createElement("div");
             newCellDiv.setAttribute('id', `cell_r${i}c${j}`);
             newCellDiv.setAttribute('class', "mCell");
+            newCellDiv.style.transitionDuration = "0.3s";
             newCellDiv.textContent = " - ";
             newRowDiv.appendChild( newCellDiv );
         }
@@ -29,63 +27,55 @@ function addRows(){
 
 }
 
-function placeBombs(){
+function place_bombs(){
     let placedBombs = 0;
 
     while( placedBombs <= NUM_BOMBS ) {
         let bombCellRow = Math.floor(Math.random() * GAME_ROWS);
         let bombCellCol = Math.floor(Math.random() * GAME_COLS);
-        console.log( `ROW: ${bombCellRow}  COL: ${bombCellCol} CURSTATE: ${boardContents[bombCellRow][bombCellCol]}` );
 
-        // only place a bomb if empty (random choice can repeat)
         if( boardContents[bombCellRow][bombCellCol] == 'EMPTY' ) {
             boardContents[bombCellRow][bombCellCol] = 'B';
             placedBombs++;
-            console.log( `PLACING BOMB AT ROW: ${bombCellRow}  COL: ${bombCellCol}` );
         }
     }
 }
 
-function addNumbers(){
-    for ( let row=0; row<GAME_ROWS; row++ ) {
-        for ( let col=0; col < GAME_COLS; col++ ) {
+function add_numbers(){
+    for ( let i=0; i<GAME_ROWS; i++ ) {
+        for ( let j=0; j < GAME_COLS; j++ ) {
 
-            // don't modify cells that have a bomb
-            if ( boardContents[row][col] === 'B' ) { 
+            if ( boardContents[i][j] === 'B' ) { 
                 continue;
             }
 
-            // for cells that don't have a bomb, get the number
             let neighborBombs = 0
 
-            // setup search grid, set limits at 0 and GAME_ROWS-1
-            let searchRowStart = Math.max( 0, row-1 );
-            let searchRowEnd = Math.min( row+1, GAME_ROWS - 1 );
-            let searchColStart = Math.max( 0, col-1 );
-            let searchColEnd = Math.min( col+1, GAME_COLS - 1 );
+            let searchRowStart = Math.max( 0, i-1 );
+            let searchRowEnd = Math.min( i+1, GAME_ROWS - 1 );
+            let searchColStart = Math.max( 0, j-1 );
+            let searchColEnd = Math.min( j+1, GAME_COLS - 1 );
 
-            // search the grid and count bombs
             for ( let r=searchRowStart; r <= searchRowEnd; r++ ){
                 for ( let c=searchColStart; c <= searchColEnd; c++ ){
                     if ( boardContents[r][c] === 'B' ) { neighborBombs++; } 
                 }
             }
 
-            // set the board state to the number of neighbor bombs
-            boardContents[row][col] = neighborBombs;
+            boardContents[i][j] = neighborBombs;
         }
     }
 }
 
-function initBoardState(){
+function init_board_state(){
     boardContents = new Array(GAME_ROWS);
     boardExposed = new Array(GAME_ROWS);
-    for ( let row=0; row<GAME_ROWS; row++ ) {
-        boardContents[row] = new Array(GAME_COLS);
-        boardExposed[row] = new Array(GAME_COLS);
-        for ( let col=0; col < GAME_COLS; col++ ) {
-            boardContents[row][col] = 'EMPTY';
-            boardExposed[row][col] = false;
+    for ( let i=0; i<GAME_ROWS; i++ ) {
+        boardContents[i] = new Array(GAME_COLS);
+        boardExposed[i] = new Array(GAME_COLS);
+        for ( let j=0; j < GAME_COLS; j++ ) {
+            boardContents[i][j] = 'EMPTY';
+            boardExposed[i][j] = false;
         }
     }
 
@@ -123,60 +113,77 @@ function corresponding_color(num) {
     }
 }
 
-function updateBoard(){
-    for ( let row=0; row<GAME_ROWS; row++ ) {
-        for ( let col=0; col < GAME_COLS; col++ ) {
-            let cellId = document.getElementById( `cell_r${row}c${col}` );
+function update_board(){
+    for ( let i=0; i<GAME_ROWS; i++ ) {
+        for ( let j=0; j < GAME_COLS; j++ ) {
+            let cellId = document.getElementById( `cell_r${i}c${j}` );
             // TODO error check on cellId
-            if ( boardExposed[row][col] ) {
-                if (boardContents[row][col] == 0) {
+            if ( boardExposed[i][j] ) {
+                if (boardContents[i][j] == 0) {
                     cellId.textContent = " ";
                 }
                 else {
-                    cellId.textContent = boardContents[row][col];
+                    cellId.textContent = boardContents[i][j];
                 }
-                let colors = corresponding_color(boardContents[row][col]);
+                let colors = corresponding_color(boardContents[i][j]);
                 cellId.style.backgroundColor = colors[0];
                 cellId.style.color = colors[1];
             }
         }
     }
-
-    let hId = document.getElementById( "game-header");
-    hId.innerHTML = GAME_STATE;
-
 }
 
-function cellClicked( row, col ) {
+function cell_clicked( row, col ) {
     console.log( `Cell clicked: r:${row} c:${col}\n` );
     if ( GAME_STATE == 'ACTIVE' ) {
         boardExposed[row][col] = true;
-        checkGameState();
-        updateBoard();
+        let state = check_game_state();
+        if (state == true) {
+            update_board();
+        }
     }
 }
 
-function checkGameState() {
+function game_lost() {
+    for ( let i=0; i<GAME_ROWS; i++ ) {
+        for ( let j=0; j < GAME_COLS; j++ ) {
+            let cellId = document.getElementById( `cell_r${i}c${j}` );
+            cellId.textContent = " "
+            cellId.style.backgroundColor = "grey";
+            cellId.style.color = "white";
+        }
+    }
+    let game_grid = document.getElementById( `game-grid` );
+    game_grid.style.backgroundColor = "#e0e0e0";
+    alert("Bomb tripped! Refresh the game to play again");
+
+}
+
+function check_game_state() {
     let totalExposed = 0;
-    for ( let row=0; row<GAME_ROWS; row++ ) {
-        for ( let col=0; col < GAME_COLS; col++ ) {
-            if ( boardExposed[row][col] ) {
+    for ( let i=0; i<GAME_ROWS; i++ ) {
+        for ( let j=0; j < GAME_COLS; j++ ) {
+            if ( boardExposed[i][j] ) {
                 totalExposed++;
-                if ( boardContents[row][col] == 'B' ) { GAME_STATE = 'LOST' }
+                if ( boardContents[i][j] == 'B' ) { 
+                    GAME_STATE = 'LOST'
+                    game_lost();
+                    return false;
+                }
             }
         }
     }
     if ( GAME_STATE != 'LOST' && totalExposed == GAME_ROWS * GAME_COLS ) {
         GAME_STATE = 'WIN';
     }
-
+    return true;
 }
 
-function addEvents(){
-    for ( let row=0; row<GAME_ROWS; row++ ) {
-        for ( let col=0; col < GAME_COLS; col++ ) {
-            let cellId = document.getElementById( `cell_r${row}c${col}` );
-            cellId.addEventListener("click", () => { cellClicked( row, col ); });
+function add_events(){
+    for ( let i=0; i<GAME_ROWS; i++ ) {
+        for ( let j=0; j < GAME_COLS; j++ ) {
+            let cellId = document.getElementById( `cell_r${i}c${j}` );
+            cellId.addEventListener("click", () => { cell_clicked( i, j ); });
         }
     }
 }
@@ -184,14 +191,14 @@ function addEvents(){
 function main() { 
 
     GAME_STATE='SETUP';
-    addRows(); 
-    addEvents();        // click event calls cellClicked( row, col );
-    initBoardState();   // all will be EMPTY
-    placeBombs();       // some will be B
-    addNumbers();       // the rest will have <number>
+    add_rows(); 
+    add_events();     
+    init_board_state();   
+    place_bombs();       
+    add_numbers();      
 
     GAME_STATE = 'ACTIVE';
-    updateBoard();
+    update_board();
 
 }
 window.onload = main;
