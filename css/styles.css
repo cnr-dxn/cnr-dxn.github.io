@@ -630,7 +630,7 @@ hr {
 }
 
 .top-container-game {
-    height: 55rem;
+    height: 35rem;
     background-size: cover; 
     background-position: center center;
     background-repeat: no-repeat;
@@ -638,12 +638,13 @@ hr {
     text-align: center;
     display: flex;
     flex-direction: column;
+    margin-bottom: 5rem;
     /* border: 3px solid grey;  */
 }
 
-.game-container {
+/* .game-container {
     height: 500rem;
-}
+} */
 
 .game-card-title {
     margin-top: 3rem;
@@ -655,13 +656,12 @@ hr {
 }
 
 .game-grid {
-    margin-top: -5rem;
-    margin-bottom: 15rem;
     /* background-color: rgb(248, 175, 255); */
+    margin-top: 2rem;
     margin-left: 10rem;
     margin-right: 10rem;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    /* padding-top: 4rem; */
+    /* padding-bottom: 4rem; */
     border-radius: 3rem;
     /* box-shadow: 3px 3px 4px #000000; */
     transition: 0.3s;
@@ -706,7 +706,7 @@ hr {
 #game-confetti {
     background-image: url("../img/confetti.gif");
     width: 100%;
-    height: 100%;
+    height: 50%;
     position: absolute;
     visibility: hidden;
 }
