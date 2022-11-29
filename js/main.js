@@ -12,13 +12,13 @@ function add_rows(){
     for (let i=0; i<GAME_ROWS; i++) {
         const newRowDiv = document.createElement("div");
         newRowDiv.setAttribute('id', `row${i}-div`);
-        newRowDiv.setAttribute('class', "mRow");
+        newRowDiv.setAttribute('class', "game-row");
         tableElement.appendChild( newRowDiv );
 
         for (let j=0; j < GAME_COLS; j++) {
             const newCellDiv = document.createElement("div");
             newCellDiv.setAttribute('id', `cell_r${i}c${j}`);
-            newCellDiv.setAttribute('class', "mCell");
+            newCellDiv.setAttribute('class', "game-cell");
             newCellDiv.style.transitionDuration = "0.3s";
             newCellDiv.textContent = " - ";
             newRowDiv.appendChild( newCellDiv );
@@ -27,7 +27,7 @@ function add_rows(){
 
 }
 
-function place_bombs(){
+function place_bombs() {
     let placedBombs = 0;
 
     while (placedBombs < NUM_BOMBS) {
@@ -41,7 +41,7 @@ function place_bombs(){
     }
 }
 
-function add_numbers(){
+function add_numbers() {
     for (let i=0; i<GAME_ROWS; i++) {
         for (let j=0; j < GAME_COLS; j++) {
 
@@ -80,7 +80,7 @@ function check_win() {
     }
 
     if (exposed_count === (GAME_ROWS*GAME_COLS) - NUM_BOMBS) {
-        game_win();
+        game_won();
     }
 
     else {
@@ -194,7 +194,6 @@ function game_won() {
     expose_board();
     let confetti = document.getElementById( `game-confetti` );
     confetti.style.visibility = "visible";
-    alert("You won! Congratulations! Refresh this page to continue exploring the website, or to play again.");
 }
 
 function game_lost() {
@@ -207,7 +206,7 @@ function game_lost() {
         }
     }
     let game_grid = document.getElementById( `game-grid` );
-    game_grid.style.backgroundColor = "#e0e0e0";
+    // game_grid.style.backgroundColor = "#e0e0e0";
     alert("Bomb tripped! Refresh the game to play again");
     expose_board();
 
@@ -230,6 +229,7 @@ function check_game_state() {
     if (GAME_STATE != 'LOST' && totalExposed == (GAME_ROWS * GAME_COLS) - NUM_BOMBS) {
         GAME_STATE = 'WIN';
         game_won();
+        alert("Congratulations! You won the game! Refresh the page to continue exploring this site.")
         return false;
     }
     return true;
