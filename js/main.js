@@ -168,6 +168,13 @@ function expose_board() {
 
 }
 
+function game_won() {
+    expose_board();
+    let confetti = document.getElementById( `game-confetti` );
+    confetti.style.visibility = "visible";
+    alert("You won! Congratulations! Refresh this page to continue exploring the website, or to play again.");
+}
+
 function game_lost() {
     for ( let i=0; i<GAME_ROWS; i++ ) {
         for ( let j=0; j < GAME_COLS; j++ ) {
@@ -200,6 +207,8 @@ function check_game_state() {
     }
     if ( GAME_STATE != 'LOST' && totalExposed == (GAME_ROWS * GAME_COLS) - NUM_BOMBS ) {
         GAME_STATE = 'WIN';
+        game_won();
+        return false;
     }
     return true;
 }
