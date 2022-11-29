@@ -26,7 +26,7 @@ body {
 }
 
 .top-container-contact {
-    height: 40rem;
+    height: 45rem;
     background-size: cover; 
     background-position: center center;
     background-repeat: no-repeat;
@@ -516,9 +516,6 @@ hr {
     margin-top: .2rem;
 }
 
-/* IF YOURE GRADING THIS NOW IGNORE THIS TAG, IT'S SOLELY USED FOR ICA8: */
-/* IF YOURE GRADING THIS NOW IGNORE THIS TAG, IT'S SOLELY USED FOR ICA8: */
-/* IF YOURE GRADING THIS NOW IGNORE THIS TAG, IT'S SOLELY USED FOR ICA8: */
 #ica8_headshot {
     width: 13rem;
 }
@@ -631,6 +628,80 @@ hr {
     background-color: #04491e;
     color: white;
 }
+
+.top-container-game {
+    height: 55rem;
+    background-size: cover; 
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    /* border: 3px solid grey;  */
+}
+
+.game-container {
+    height: 500rem;
+}
+
+.game-card-title {
+    margin-top: 3rem;
+    font-size: 8rem;
+}
+
+.game-body {
+    background-image: url('../img/game_bg.png');
+}
+
+.game-grid {
+    margin-top: 7rem;
+    background-color: rgb(248, 175, 255);
+    margin-left: 10rem;
+    margin-right: 10rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    border-radius: 3rem;
+    box-shadow: 3px 3px 4px #000000;
+}
+
+.game-header {
+    border: 1px solid grey; 
+    margin-bottom: 2rem;
+}
+
+.mTable { 
+    font-family: forma-djr-deck, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: white;
+    box-shadow: 3px 3px 4px #000000;
+    display: table;
+    width: 50%; 
+    height: 20rem;
+    border: 1px solid black;
+    margin: auto;
+}
+
+.mRow { 
+    display: table-row; 
+}
+
+.mHeadRow { 
+    display: table-row; 
+    background: #DDDDDD; 
+    font-weight: bold;
+}
+
+.mCell { 
+    display: table-cell; 
+    text-align: center; 
+    padding: 3px 10px;
+    border: 1px solid #999999;
+    font-size: 1rem 
+}
+   
+   
 
 @media only screen and (min-width: 601px) {
     /* stuff */
