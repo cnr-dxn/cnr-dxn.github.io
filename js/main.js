@@ -144,6 +144,30 @@ function cell_clicked( row, col ) {
     }
 }
 
+function expose_board() {
+    for ( let i=0; i<GAME_ROWS; i++ ) {
+        for ( let j=0; j < GAME_COLS; j++ ) {
+            boardExposed[i][j] = true;
+        }
+    }
+
+    for ( let i=0; i<GAME_ROWS; i++ ) {
+        for ( let j=0; j < GAME_COLS; j++ ) {
+            let cellId = document.getElementById( `cell_r${i}c${j}` );
+            // TODO error check on cellId
+            if ( boardExposed[i][j] ) {
+                if (boardContents[i][j] == 0) {
+                    cellId.textContent = " ";
+                }
+                else {
+                    cellId.textContent = boardContents[i][j];
+                }
+            }
+        }
+    }
+
+}
+
 function game_lost() {
     for ( let i=0; i<GAME_ROWS; i++ ) {
         for ( let j=0; j < GAME_COLS; j++ ) {
@@ -156,6 +180,7 @@ function game_lost() {
     let game_grid = document.getElementById( `game-grid` );
     game_grid.style.backgroundColor = "#e0e0e0";
     alert("Bomb tripped! Refresh the game to play again");
+    expose_board();
 
 }
 
@@ -173,7 +198,7 @@ function check_game_state() {
             }
         }
     }
-    if ( GAME_STATE != 'LOST' && totalExposed == GAME_ROWS * GAME_COLS ) {
+    if ( GAME_STATE != 'LOST' && totalExposed == (GAME_ROWS * GAME_COLS) - NUM_BOMBS ) {
         GAME_STATE = 'WIN';
     }
     return true;
