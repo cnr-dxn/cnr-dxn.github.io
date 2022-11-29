@@ -166,6 +166,7 @@ function cell_clicked( row, col ) {
     check_win();
 }
 
+
 function expose_board() {
     for (let i=0; i<GAME_ROWS; i++) {
         for (let j=0; j < GAME_COLS; j++) {
@@ -187,7 +188,6 @@ function expose_board() {
             }
         }
     }
-
 }
 
 function game_won() {
@@ -201,15 +201,14 @@ function game_lost() {
         for (let j=0; j < GAME_COLS; j++) {
             let cellId = document.getElementById( `cell_r${i}c${j}` );
             cellId.textContent = " "
-            cellId.style.backgroundColor = "grey";
-            cellId.style.color = "white";
+            cellId.style.backgroundColor = "#e0e0e0";
+            cellId.style.color = "black";
         }
     }
     let game_grid = document.getElementById( `game-grid` );
     // game_grid.style.backgroundColor = "#e0e0e0";
     alert("Bomb tripped! Refresh the game to play again");
     expose_board();
-
 }
 
 function check_game_state() {
