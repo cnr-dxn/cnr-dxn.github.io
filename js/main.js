@@ -30,7 +30,7 @@ function add_rows(){
 function place_bombs(){
     let placedBombs = 0;
 
-    while (placedBombs <= NUM_BOMBS) {
+    while (placedBombs < NUM_BOMBS) {
         let bombCellRow = Math.floor(Math.random() * GAME_ROWS);
         let bombCellCol = Math.floor(Math.random() * GAME_COLS);
 
@@ -66,6 +66,25 @@ function add_numbers(){
 
             boardContents[i][j] = neighborBombs;
         }
+    }
+}
+
+function check_win() {
+    let exposed_count = 0
+    for (let i=0; i < GAME_ROWS; i++) {
+        for (let j=0; j < GAME_COLS; j++) {
+            if (boardExposed[i][j] === true) { 
+                exposed_count++;
+            }
+        }
+    }
+
+    if (exposed_count === (GAME_ROWS*GAME_COLS) - NUM_BOMBS) {
+        game_win();
+    }
+
+    else {
+        console.log(`nope: ${exposed_count} < ${(GAME_ROWS*GAME_COLS) - NUM_BOMBS}`)
     }
 }
 
@@ -144,20 +163,21 @@ function cell_clicked( row, col ) {
             update_board();
         }
     }
+    check_win();
 }
 
 function expose_board() {
-    for ( let i=0; i<GAME_ROWS; i++ ) {
-        for ( let j=0; j < GAME_COLS; j++ ) {
+    for (let i=0; i<GAME_ROWS; i++) {
+        for (let j=0; j < GAME_COLS; j++) {
             boardExposed[i][j] = true;
         }
     }
 
-    for ( let i=0; i<GAME_ROWS; i++ ) {
-        for ( let j=0; j < GAME_COLS; j++ ) {
+    for (let i=0; i<GAME_ROWS; i++) {
+        for (let j=0; j < GAME_COLS; j++) {
             let cellId = document.getElementById( `cell_r${i}c${j}` );
             // TODO error check on cellId
-            if ( boardExposed[i][j] ) {
+            if (boardExposed[i][j]) {
                 if (boardContents[i][j] == 0) {
                     cellId.textContent = " ";
                 }
@@ -178,8 +198,8 @@ function game_won() {
 }
 
 function game_lost() {
-    for ( let i=0; i<GAME_ROWS; i++ ) {
-        for ( let j=0; j < GAME_COLS; j++ ) {
+    for (let i=0; i<GAME_ROWS; i++) {
+        for (let j=0; j < GAME_COLS; j++) {
             let cellId = document.getElementById( `cell_r${i}c${j}` );
             cellId.textContent = " "
             cellId.style.backgroundColor = "grey";
@@ -195,11 +215,11 @@ function game_lost() {
 
 function check_game_state() {
     let totalExposed = 0;
-    for ( let i=0; i<GAME_ROWS; i++ ) {
-        for ( let j=0; j < GAME_COLS; j++ ) {
-            if ( boardExposed[i][j] ) {
+    for (let i=0; i<GAME_ROWS; i++) {
+        for (let j=0; j < GAME_COLS; j++) {
+            if (boardExposed[i][j]) {
                 totalExposed++;
-                if ( boardContents[i][j] == 'B' ) { 
+                if (boardContents[i][j] == 'B') { 
                     GAME_STATE = 'LOST'
                     game_lost();
                     return false;
@@ -207,7 +227,7 @@ function check_game_state() {
             }
         }
     }
-    if ( GAME_STATE != 'LOST' && totalExposed == (GAME_ROWS * GAME_COLS) - NUM_BOMBS ) {
+    if (GAME_STATE != 'LOST' && totalExposed == (GAME_ROWS * GAME_COLS) - NUM_BOMBS) {
         GAME_STATE = 'WIN';
         game_won();
         return false;
@@ -216,8 +236,8 @@ function check_game_state() {
 }
 
 function add_events(){
-    for ( let i=0; i<GAME_ROWS; i++ ) {
-        for ( let j=0; j < GAME_COLS; j++ ) {
+    for (let i=0; i<GAME_ROWS; i++) {
+        for (let j=0; j < GAME_COLS; j++) {
             let cellId = document.getElementById( `cell_r${i}c${j}` );
             cellId.addEventListener("click", () => { cell_clicked( i, j ); });
         }
